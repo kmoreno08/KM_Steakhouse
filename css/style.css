@@ -9,7 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #333;
+  background: #1d1d1d;
   color: #fff;
   line-height: 1.6;
   overflow-x: hidden;
@@ -253,6 +253,8 @@ nav li:hover:after {
   background: rgba(0, 0, 0, 0.7);
 }
 
+/* About page */
+
 .about-img {
   width: 50%;
   height: 100%;
@@ -317,6 +319,149 @@ nav li:hover:after {
   filter: brightness(70%);
 }
 
+/* Slider for about page */
+
+.about-slider {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  width: 100vw;
+}
+
+.about-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.about-slide.about-current {
+  opacity: 1;
+}
+
+.buttons button#about-next {
+  position: absolute;
+  top: 30%;
+  right: 15px;
+}
+
+.buttons button#about-prev {
+  position: absolute;
+  top: 30%;
+  left: 15px;
+}
+.about-slide:first-child {
+  background: url("/img/group-of-people-gathering-inside-bar-1058277.jpg")
+    no-repeat center center/cover;
+  filter: brightness(50%) saturate(140%);
+}
+
+.about-slide:nth-child(2) {
+  background: url("/img/restaurant-dark-bar-architecture-34650.jpg") no-repeat
+    center center/cover;
+  filter: brightness(50%) saturate(140%);
+}
+
+.about-slide:nth-child(3) {
+  background: url("/img/table-in-vintage-restaurant-6267.jpg") no-repeat center
+    center/cover;
+  filter: brightness(50%) saturate(140%);
+}
+
+.about-slide:nth-child(4) {
+  background: url("/img/man-service-coffee-3055123.jpg") no-repeat;
+  background-size: cover;
+  background-position: 50% 70%;
+  filter: brightness(50%) saturate(140%);
+}
+
+.about-slide:nth-child(5) {
+  background: url("/img/beer-cheese-food-ham-56007.jpg") no-repeat center
+    center/cover;
+  filter: brightness(60%) saturate(140%);
+}
+
+.about-slide:nth-child(6) {
+  background: url("/img/woman-in-front-of-table-1267315.jpg") no-repeat;
+  background-position: 50% 35%;
+  background-size: cover;
+
+  filter: brightness(60%) saturate(140%);
+}
+
+.about-body {
+  display: flex;
+  justify-content: center;
+  background: url("/img/background-wood.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.about-body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.about-main-wrapper {
+  width: 80%;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-main-text {
+  background: #1d1d1d;
+  height: 45vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.about-main-text p {
+  line-height: 30px;
+  text-align: center;
+  padding: 0 1%;
+  text-align: center;
+  position: relative;
+  color: rgb(226, 226, 226);
+  border-right-style: solid;
+  border-width: 2px;
+}
+.about-main-text p:nth-child(3) {
+  border-right-style: none;
+}
+
+.about-img-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.about-img-1 {
+  background: url("/img/person-preparing-a-beverage-in-a-stem-glass-2842886.jpg")
+    no-repeat center center/cover;
+  filter: brightness(60%) saturate(140%);
+  width: 50%;
+  height: 100%;
+}
+.about-img-2 {
+  background: url("/img/man-holding-plate-with-food-in-room-2102934.jpg")
+    no-repeat center center/cover;
+  filter: brightness(60%) saturate(140%);
+  width: 50%;
+  height: 100%;
+}
+
 /* footer */
 .footer {
   display: flex;
@@ -354,7 +499,7 @@ nav li:hover:after {
 }
 
 .footer-right-wrapper {
-  width: 20%;
+  width: 30%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -368,6 +513,26 @@ nav li:hover:after {
 .footer-right-wrapper a {
   text-decoration: none;
   color: rgb(226, 226, 226);
+}
+
+.footer-right-wrapper button {
+  padding: 0.5rem 1rem;
+  background: rgb(226, 226, 226);
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: "Libre Baskerville", serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400px;
+  text-align: center;
+}
+
+.footer-right-wrapper button:hover {
+  filter: brightness(60%);
+  transform: scale(0.9);
 }
 @media screen and (max-width: 1150px) {
   .nav-links {

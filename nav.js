@@ -23,6 +23,3 @@ function navSlide() {
 }
 
 navSlide();
-
-/* Init Rellax */
-let rellax = new rellax(".rellax");
