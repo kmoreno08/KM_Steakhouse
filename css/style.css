@@ -471,7 +471,7 @@ nav li:hover:after {
 }
 
 .main-menu-text-wrapper {
-  height: 40vh;
+  height: 45vh;
   width: 50%;
   margin: 0 auto;
   display: flex;
@@ -509,7 +509,7 @@ nav li:hover:after {
 }
 
 .menu-wrapper {
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -520,7 +520,7 @@ nav li:hover:after {
   width: 80%;
   height: 100%;
   background: lightgreen;
-  display: block;
+  display: none;
 }
 /* Main Menu - Weekend Special */
 
@@ -635,6 +635,114 @@ nav li:hover:after {
   background: #ff3636;
 }
 
+/* Main Menu - Entrees */
+.menu-entrees-grid {
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  column-gap: 20px;
+}
+
+.menu-item-1 {
+  background: lightgreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-item-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 30px;
+}
+
+.menu-item-img {
+  height: 50%;
+  width: 100%;
+  background: blue;
+}
+.menu-item-2 {
+  background: lightcoral;
+}
+.menu-item-3 {
+  background: lightblue;
+}
+.menu-item-4 {
+  background: lightpink;
+}
+.menu-item-5 {
+  background: lightgrey;
+}
+.menu-item-6 {
+  background: lightgoldenrodyellow;
+}
+
+/* Hours and Location */
+.hours-container {
+  display: flex;
+  width: 100%;
+  height: 150vh;
+  justify-content: center;
+  background: url("/img/background-wood.jpg") no-repeat center center/cover;
+  /* filter: brightness(30%) saturate(140%); */
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hours-container:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.hours-main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+  margin-top: 5vh;
+}
+
+.hours-body {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 40px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+}
+
+.hours-body h1 {
+  margin: 30px 0px;
+  font-size: 50px;
+}
+
+.hours-body h3 {
+  margin: 15px 0;
+  font-size: 32px;
+}
+.hours-body p {
+  font-size: 16px;
+}
+#map {
+  height: 50vh;
+  width: 100%;
+}
 /* footer */
 .footer {
   display: flex;
